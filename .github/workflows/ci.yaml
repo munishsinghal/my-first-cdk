@@ -34,12 +34,12 @@ jobs:
 
       - name: Print AWS Keys
         run: |
-            ${( secrets.AWS_ACCESS_KEY_ID)} 
-            ${( secrets.AWS_SECRET_ACCESS_KEY_ID)} 
+            ${{ secrets.AWS_ACCESS_KEY_ID}} 
+            ${{ secrets.AWS_SECRET_ACCESS_KEY_ID}} 
 
       - name: DEPLOY AWS CDK Stack
         run: "npx cdk deploy MyFirstCdkStack --ci --require-approval never --no-asset-metadata"
         env:
-          AWS_ACCESS_KEY_ID: ${( secrets.AWS_ACCESS_KEY_ID)} 
-          AWS_SECRET_ACCESS_KEY: ${( secrets.AWS_SECRET_ACCESS_KEY_ID)}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID}} 
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID}} 
           AWS_DEFAULT_REGION: "eu-east-1"
