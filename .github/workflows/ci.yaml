@@ -18,7 +18,7 @@ jobs:
       - name: Initiated By User
         run: echo $GITHUB_ACTOR
       
-      - name: CHECKOUT Code
+      - name: CHECKOUT Code for CI
         uses: actions/checkout@v4
 
       - name: INSTALL Node.js ${{ matrix.node-version }}
