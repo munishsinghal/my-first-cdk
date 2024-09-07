@@ -40,6 +40,6 @@ jobs:
       - name: DEPLOY AWS CDK Stack
         run: "npx cdk deploy MyFirstCdkStack --ci --require-approval never --no-asset-metadata"
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID}} 
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID}} 
+          AWS_ACCESS_KEY_ID: "AKIAQGYBP6H4HEDXA2OU"
+          AWS_SECRET_ACCESS_KEY: "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" 
           AWS_DEFAULT_REGION: "eu-east-1"
