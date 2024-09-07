@@ -12,7 +12,7 @@ test('SQS Queue Created', () => {
     const stack = new MyFirstCdk.MyFirstCdkStack(app, 'MyTestStack');
     const template = Template.fromStack(stack);
 
-    template.hasResourceProperties('AWS::SQS::Queue', {
+    template.hasResourceProperties('AWS::Lambda::Function', {
         FunctionName: 'my-first-cdk',
         Runtime: lambda.Runtime.NODEJS_20_X,
         Handler: 'index.handler',
