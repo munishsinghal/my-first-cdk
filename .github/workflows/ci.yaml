@@ -27,10 +27,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: INSTALL dependencies
-        uses: npm ci
+        run: npm ci
       
       - name: BUILD CDK Stack
-        uses: npm run build
+        run: npm run build
 
       - name: DEPLOY AWS CDK Stack
         run: "npx cdk deploy MyFirstCdkStack --ci --require-approval never --no-asset-metadata"
