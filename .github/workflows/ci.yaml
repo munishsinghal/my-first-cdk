@@ -32,7 +32,7 @@ jobs:
       - name: BUILD CDK Stack
         run: npm run build
 
-      - name: Print AWS Keys
+      - name: Print AWS Keys here
         run: |
             echo ${{ secrets.AWS_ACCESS_KEY_ID}} 
             echo ${{ secrets.AWS_SECRET_ACCESS_KEY_ID}} 
