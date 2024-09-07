@@ -37,4 +37,4 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${( secrest.AWS_ACCESS_KEY_ID)} 
           AWS_SECRET_ACCESS_KEY: ${( secrest.AWS_SECRET_ACCESS_KEY_ID)}
-          AWS_DEFAULT_REGION: "eu-west-1"
+          AWS_DEFAULT_REGION: "eu-east-1"
