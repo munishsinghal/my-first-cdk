@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: INSTALL dependencies
+      - name: INSTALL dependencies1
         run: npm ci
       
       - name: BUILD CDK Stack
