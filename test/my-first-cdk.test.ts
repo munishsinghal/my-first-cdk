@@ -7,12 +7,12 @@ import * as lambda from 'aws-cdk-lib/aws-lambda';
 
 // example test. To run these tests, uncomment this file along with the
 // example resource in lib/my-first-cdk-stack.ts
-test('SQS Queue Created', () => {
+test('My First Stack Created', () => {
     const app = new cdk.App();
     const stack = new MyFirstCdk.MyFirstCdkStack(app, 'MyTestStack');
     const template = Template.fromStack(stack);
 
-    template.hasResourceProperties('AWS::SQS::Queue', {
+    template.hasResourceProperties('AWS::Lambda::Function', {
         FunctionName: 'my-first-cdk',
         Runtime: lambda.Runtime.NODEJS_20_X,
         Handler: 'index.handler',
